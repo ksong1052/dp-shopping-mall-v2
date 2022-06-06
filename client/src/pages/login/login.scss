@@ -1,0 +1,41 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url("../../images/banner1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .container {
+    width: 55%;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loginForm {
+      width: 45%;
+
+      .loginTitle {
+        margin-bottom: 30px;
+      }
+
+      .lField {
+        margin-bottom: 75px;
+      }
+
+      .lLabel {
+        float: left;
+        margin-top: 15px;
+        font-size: medium;
+        font-weight: 500;
+      }
+
+      .lButton {
+        padding: 15px 50px;
+        margin-top: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.register {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-self: center;
+  background-image: url("../../images/curved-bgg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .container {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: pink;
+
+    .registerForm {
+      width: 45%;
+      // background-color: yellow;
+
+      .registerTitle {
+        margin-bottom: 30px;
+      }
+
+      .rField {
+        margin-bottom: 75px;
+      }
+
+      .rLabel {
+        float: left;
+        margin-top: 15px;
+        font-size: medium;
+        font-weight: 500;
+      }
+
+      // .rCheckout {
+      //   width: 100%;
+      //   float: left;
+      //   margin-bottom: 35px;
+      // }
+
+      .rButton {
+        padding: 15px 50px;
+        margin-top: 35px;
+      }
+    }
+  }
+}
