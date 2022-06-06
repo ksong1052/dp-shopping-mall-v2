@@ -34,7 +34,7 @@ const Login = () => {
     axios.post(`${USER_SERVER}/login`, dataToSubmit)
       .then(response => {
         if(response.data.loginSuccess) {
-          dispatch(loginUser(response.data));          
+          loginUser(dispatch, response.data);          
           navigate('/');
         } else {
           alert("Failed to sign in.");

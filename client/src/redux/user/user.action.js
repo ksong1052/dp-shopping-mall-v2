@@ -1,29 +1,40 @@
-import { UserActionTypes } from './user.types';
+// import { UserActionTypes } from './user.types';
 
-export function registerUser(result) {
-  // const request = axios.post(`${USER_SERVER}/register`, userInfo)
-  //       .then(response => response.data)   
-  // return {
-  //     type: UserActionTypes.REGISTER_USER,
-  //     payload: request
-  // }
+// export function registerUser(result) {
+//   return {
+//     type: UserActionTypes.REGISTER_USER,
+//     payload: result
+//   }
+// }
 
-  return {
-    type: UserActionTypes.REGISTER_USER,
-    payload: result
-  }
+// export function loginUser(userInfo) {  
+//   return {
+//     type: UserActionTypes.LOGIN_USER,
+//     payload: userInfo 
+//   }
+// }
+
+// export function logoutUser(result) {
+//   return {
+//     type: UserActionTypes.LOGOUT_USER,
+//     payload: result
+//   }
+// }
+
+
+// ==================================================================
+/* Redux-toolkit */
+
+import { userActions } from './user.reducer';
+
+export function registerUser(dispatch, result) {  
+  dispatch(userActions.registerUser(result));  
 }
 
-export function loginUser(userInfo) {  
-  return {
-    type: UserActionTypes.LOGIN_USER,
-    payload: userInfo
-  }
+export function loginUser(dispatch, userInfo) { 
+  dispatch(userActions.loginUser(userInfo));
 }
 
-export function logoutUser(result) {
-  return {
-    type: UserActionTypes.LOGOUT_USER,
-    payload: result
-  }
+export function logoutUser(dispatch, result) {
+  dispatch(userActions.logoutUser(result));
 }

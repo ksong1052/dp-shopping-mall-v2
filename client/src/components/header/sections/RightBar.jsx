@@ -18,7 +18,7 @@ const RightBar = () => {
     axios.get(`${USER_SERVER}/logout`)
       .then(response => {
         if(response.data.logoutSuccess) {
-          dispatch(logoutUser(response.data));
+          logoutUser(dispatch, response.data);
           navigate('/login');          
         } else {
           alert('Failed to logout');

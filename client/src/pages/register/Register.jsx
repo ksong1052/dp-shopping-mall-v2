@@ -42,7 +42,7 @@ const Register = () => {
     axios.post(`${USER_SERVER}/register`, dataToSubmit)
       .then(response => {
         if(response.data.registerSuccess) {
-          dispatch(registerUser(response.data));
+          registerUser(dispatch, response.data);
           navigate('/login');
         } else {
           alert("Failed to sign up.");
